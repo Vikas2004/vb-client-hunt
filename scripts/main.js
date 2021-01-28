@@ -1,6 +1,8 @@
+// imports
 import locationsArray from '../init-locations.js';
 
-// for location element we assigned location id.
+
+// loaction id assigned to locationElement
 let locationElement = document.getElementById("location");
 
 window.addEventListener('load', main);
