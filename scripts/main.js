@@ -42,7 +42,7 @@ async function locationHandler() {
     });
 
     if(error) {
-        document.getElementById("error-message").innerHTML = "You're not 30 meters nearer to any place.";
+        document.getElementById("error-message").innerHTML = "You're not within the range of the location.";
     } else {
         document.getElementById("error-message").innerHTML = "";
     }
@@ -68,11 +68,11 @@ function distanceBetweenLocations(questLat, questLon) {
 }
 
 
-//Calculates distance and checks if within the range of 30 meters
+//Calculates distance and checks if within the range of 20 meters
 function isInside(questLat, questLon) {
     let distance = distanceBetweenLocations(questLat, questLon);
     console.log("distance: " + distance);
-    if (distance < 30) {
+    if (distance < 20) {
         return true;
     } else {
         return false;

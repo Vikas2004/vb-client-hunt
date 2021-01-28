@@ -1,13 +1,13 @@
 export default [
     {
         Name: '68 Block',
-        Latitude: 40.360465,
-        Longitude: -94.887566
+        Latitude: 40.356003,
+        Longitude: -94.881455
     },
     {
-        Name: '56 block',
-        Latitude: 40.360970,
-        Longitude: -94.888242
+        Name: 'Admin Block',
+        Latitude: 40.35341672746787, 
+        Longitude: -94.88354434774271
     }
 
 ];
