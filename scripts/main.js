@@ -32,19 +32,23 @@ async function getLocation() {
 async function locationHandler() {
     let locText = await getLocation();
     currentlat = locText.coords.latitude;
-    document.getElementById("device-lat").innerHTML = "This is about device-lat: " + currentlat.toFixed(6);
+    document.getElementById("device-lat").innerHTML = "Device-latitude: " + currentlat.toFixed(6);
     currentlon = locText.coords.longitude;
-    document.getElementById("device-long").innerHTML = "This is about device-long: " + currentlon.toFixed(6);
+    document.getElementById("device-long").innerHTML = "Device-longitude: " + currentlon.toFixed(6);
 
     locationsArray.forEach(function (value) {
         if (isInside(value.Latitude, value.Longitude)) {
             document.getElementById("locationAnswer").innerHTML = value.Name;
+            let utterance = new SpeechSynthesisUtterance("You reached the location" + value.Name);
+            speechSynthesis.speak(utterance);
             error = false;
         }
     });
 
     if(error) {
-        document.getElementById("error-message").innerHTML = "You're not within the range of the location.";
+        document.getElementById("error-message").innerHTML = "You are not in any location of the quest.";
+        let utterance = new SpeechSynthesis("You are not in any location of the quest.");
+        speechSynthesis.speak(utterance);
     } else {
         document.getElementById("error-message").innerHTML = "";
     }
