@@ -47,7 +47,7 @@ async function locationHandler() {
 
     if(error) {
         document.getElementById("error-message").innerHTML = "You are not in any location of the quest.";
-        let utterance = new SpeechSynthesis("You are not in any location of the quest.");
+        let utterance = new SpeechSynthesisUtterance("You are not in any location of the quest.");
         speechSynthesis.speak(utterance);
     } else {
         document.getElementById("error-message").innerHTML = "";
