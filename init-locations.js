@@ -23,6 +23,11 @@ export default [
         Name: 'Bearcat Stadiium',
         Latitude: 40.35073819617418, 
         Longitude: -94.88584822342064
+    },
+    {
+        Name: 'Keerthi Home',
+        Latitude:  17.324995892947378, 
+        Longitude: 78.5549302550914
     }
 
 
